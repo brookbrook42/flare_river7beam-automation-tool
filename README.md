@@ -1,2 +1,3 @@
-# flare_river7beam-automation-tool
-A automation-tool project by brookbrook42
+# Automation Tool Project
+
+An automation tool for web scraping and desktop automation.
