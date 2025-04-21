@@ -286,3 +286,19 @@ def get_date_range(start_date, end_date):
         date_list.append(current_date)
         current_date += timedelta(days=1)
     return date_list
+
+# Update at 2025-04-21 18:01:12
+# Fixed some bugs
+# This is a random comment
+# Added some random functionality
+
+import requests
+
+def fetch_data(url):
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        return response.json()
+    except requests.RequestException as e:
+        print(f"Error fetching data: {e}")
+        return None
