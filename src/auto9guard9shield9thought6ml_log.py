@@ -406,3 +406,16 @@ def is_prime(n):
         if n % i == 0:
             return False
     return True
+
+# Update at 2025-04-28 03:51:11
+# Optimized the algorithm
+
+from datetime import datetime, timedelta
+
+def get_date_range(start_date, end_date):
+    date_list = []
+    current_date = start_date
+    while current_date <= end_date:
+        date_list.append(current_date)
+        current_date += timedelta(days=1)
+    return date_list
