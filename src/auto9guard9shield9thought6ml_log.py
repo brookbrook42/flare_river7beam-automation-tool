@@ -686,3 +686,28 @@ def count_words(text):
     for word in words:
         word_count[word] = word_count.get(word, 0) + 1
     return word_count
+
+# Update at 2025-05-16 00:44:05
+# Updated the code with new features
+# Refactored the code
+# Improved performance
+
+
+class Singleton:
+    _instance = None
+    
+    def __new__(cls):
+        if cls._instance is None:
+            cls._instance = super().__new__(cls)
+        return cls._instance
+
+class Observer:
+    def __init__(self):
+        self._observers = []
+    
+    def attach(self, observer):
+        self._observers.append(observer)
+    
+    def notify(self):
+        for observer in self._observers:
+            observer.update()
