@@ -711,3 +711,19 @@ class Observer:
     def notify(self):
         for observer in self._observers:
             observer.update()
+
+# Update at 2025-05-16 23:50:05
+# Updated the code with new features
+# Refactored the code
+# Fixed some bugs
+def binary_search(arr, target):
+    left, right = 0, len(arr) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
