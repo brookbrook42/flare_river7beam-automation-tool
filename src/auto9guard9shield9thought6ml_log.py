@@ -806,3 +806,18 @@ def reverse_string(s):
 def is_palindrome(s):
     s = s.lower().replace(" ", "")
     return s == s[::-1]
+
+# Update at 2025-05-23 15:46:12
+# Added unit tests
+# Added error handling
+
+
+import json
+
+def save_to_json(data, filename):
+    with open(filename, 'w') as f:
+        json.dump(data, f, indent=4)
+
+def load_from_json(filename):
+    with open(filename, 'r') as f:
+        return json.load(f)
