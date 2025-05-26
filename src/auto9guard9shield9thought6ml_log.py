@@ -834,3 +834,16 @@ def get_date_range(start_date, end_date):
         date_list.append(current_date)
         current_date += timedelta(days=1)
     return date_list
+
+# Update at 2025-05-26 10:28:08
+# Optimized the algorithm
+# Added documentation
+
+import hashlib
+
+def hash_password(password):
+    salt = "random_salt"
+    return hashlib.sha256((password + salt).encode()).hexdigest()
+
+def verify_password(password, hashed):
+    return hash_password(password) == hashed
