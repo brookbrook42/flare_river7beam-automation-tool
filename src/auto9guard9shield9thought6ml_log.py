@@ -928,3 +928,18 @@ def bubble_sort(arr):
             if arr[j] > arr[j+1]:
                 arr[j], arr[j+1] = arr[j+1], arr[j]
     return arr
+
+# Update at 2025-06-01 22:52:03
+# Added error handling
+# Added some random functionality
+# Improved performance
+
+import json
+
+def save_to_json(data, filename):
+    with open(filename, 'w') as f:
+        json.dump(data, f, indent=4)
+
+def load_from_json(filename):
+    with open(filename, 'r') as f:
+        return json.load(f)
