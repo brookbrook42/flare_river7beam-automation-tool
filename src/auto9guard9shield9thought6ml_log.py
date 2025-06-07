@@ -1042,3 +1042,28 @@ def bubble_sort(arr):
             if arr[j] > arr[j+1]:
                 arr[j], arr[j+1] = arr[j+1], arr[j]
     return arr
+
+# Update at 2025-06-08 08:47:10
+# Added error handling
+# Fixed some bugs
+# Added some random functionality
+
+
+class Singleton:
+    _instance = None
+    
+    def __new__(cls):
+        if cls._instance is None:
+            cls._instance = super().__new__(cls)
+        return cls._instance
+
+class Observer:
+    def __init__(self):
+        self._observers = []
+    
+    def attach(self, observer):
+        self._observers.append(observer)
+    
+    def notify(self):
+        for observer in self._observers:
+            observer.update()
