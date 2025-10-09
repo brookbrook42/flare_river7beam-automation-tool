@@ -1356,3 +1356,15 @@ def resize_image(image_path, size):
 def convert_to_grayscale(image_path):
     with Image.open(image_path) as img:
         return img.convert('L')
+
+# Update at 2025-10-10 07:52:08
+# Optimized the algorithm
+# This is a random comment
+# Added error handling
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
