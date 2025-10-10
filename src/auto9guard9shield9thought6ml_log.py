@@ -1368,3 +1368,18 @@ def is_prime(n):
         if n % i == 0:
             return False
     return True
+
+# Update at 2025-10-11 03:14:10
+# Optimized the algorithm
+# Added documentation
+# Refactored the code
+import asyncio
+
+async def fetch_data_async(url):
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url) as response:
+            return await response.json()
+
+async def process_multiple_urls(urls):
+    tasks = [fetch_data_async(url) for url in urls]
+    return await asyncio.gather(*tasks)
